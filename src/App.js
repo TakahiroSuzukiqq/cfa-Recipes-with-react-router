@@ -12,7 +12,6 @@ class App extends Component {
     ingredients: []
   }
 };
-
    componentDidMount() {
      this.getIngredientList();
 };
@@ -36,10 +35,9 @@ class App extends Component {
       <div>
       <h1>Recipes Fronted</h1>
       <IngredientForm
-        getIngredientList={ () => this.getIngredientList() }/>
+        getIngredientList={ () => this.getIngredientList() } />
       {this.state.ingredients.length < 1 ? <p>Loading...</p> :
-        <IngredientList ingredients={this.state.ingredients}
-      />}
+        <IngredientList ingredients={this.state.ingredients} />}
       </div>
     );
   }
